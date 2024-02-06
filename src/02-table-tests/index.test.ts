@@ -19,7 +19,7 @@ const testCases = [
   { a: '5', b: 2, action: Action.Divide, expected: null },
 ];
 
-describe.each(testCases)('$action ', ({ a, b, action, expected }) => {
+describe.each(testCases)('$a $action $b', ({ a, b, action, expected }) => {
   test(`returns ${expected}`, () => {
     expect(simpleCalculator({ a, b, action })).toBe(expected);
   });
